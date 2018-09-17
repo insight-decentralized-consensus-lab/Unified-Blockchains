@@ -36,3 +36,24 @@ mycursor = mydb.cursor()
 # for x in mycursor:
     # print(x)
 
+# insert into table
+# sql = "INSERT INTO blocks (number , hash, parenthash, childhash, numtx, timestamp, nonce, coin, miner, reward) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s)"
+# val = [
+    # (1, "hash1","hash0","hash2",2,123,456,"btc","addr",50),
+    # (2, "hash2","hash1","hash3",2,123,456,"btc","addr",50)
+# ]
+
+
+# mycursor.executemany(sql, val)
+# mydb.commit()
+# print(mycursor.rowcount, "was inserted.")
+
+
+
+mycursor.execute("SELECT * FROM blocks")
+
+myresult = mycursor.fetchall()
+
+for x in myresult:
+      print(x)
+      
