@@ -56,4 +56,5 @@ unifiedblock["coin"] = "btc"
 # print(unifiedtx)
 with open(outfile, 'w') as outfile:
     json.dump(unifiedblock, outfile, indent=4, sort_keys=True)
+    outfile.write('\n')
 
