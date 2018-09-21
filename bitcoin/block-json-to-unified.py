@@ -2,6 +2,14 @@ import json
 import sys, os
 import copy
 
+if(len(sys.argv)>1):
+    infilelist = sys.argv[1]
+else:
+    print("run via:")
+    print("python3 "+sys.argv[0]+" <infile.list>")
+    sys.exit(1)
+                
+
 def unify(infile, outfile):
 
     with open(infile) as f:
@@ -55,7 +63,7 @@ def unify(infile, outfile):
         json.dump(unifiedblock, outfile, indent=4, sort_keys=True)
         outfile.write('\n')
 
-with open("filelist.txt") as f:
+with open(infilelist) as f:
     line = f.readline()
     count = 0
     while(line):
