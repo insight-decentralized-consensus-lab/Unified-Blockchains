@@ -12,6 +12,7 @@ do
 	lastfile=$( printf "/home/ubuntu/ethereum-json/%07d.json \n" $(($i-1)) )
 	unified=$( printf "/home/ubuntu/unified-ethereum-json/%07d.json \n" $(($i-1)) )
 	python3 single-block-to-unified.py $lastfile $unified
+	scp $unified 10.0.0.12:/home/ubuntu/unified-json/ethereum/
     fi
 done
 echo "Updated to: $current_block"
