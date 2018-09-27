@@ -1,3 +1,9 @@
+if [ $# -ne 3 ]
+then
+    echo "Usage: $0 <start> <events-to-process> <n-parallel>"
+    exit 1
+    fi
+
 block_range() {
     for i in `seq $1 $2`
     do
@@ -11,13 +17,13 @@ block_range() {
     done
 }
 
-step=$((1000000 / $1))
+step=$(($2 / $3))
 echo $step
 
-for i in `seq 0 $(($1-1))`
+for i in `seq 0 $(($3-1))`
 do
-    start=$(($i * $step))
-    end=$(($i * $step + $step))
+    start=$(($i * $step + $1))
+    end=$(($i * $step + $step + $1))
     block_range $start $end &
 done
 
