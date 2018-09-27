@@ -61,8 +61,10 @@ mycursor.execute("SELECT MAX(number) FROM blocks")
 myresult = mycursor.fetchall()
 for x in myresult:
     blocks_inserted = x[0]
-
-list_to_process = filelist[(blocks_inserted+1):]
+if(blocks_inserted):
+    list_to_process = filelist[(blocks_inserted+1):]
+else:
+    list_to_process = filelist
 
 ### Insert new data into MySQL 1000 rows at a time for performance
 print("Insert new data...")
