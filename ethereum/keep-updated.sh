@@ -1,4 +1,4 @@
-last_block=6394025
+last_block=6396847
 
 while true
 do
