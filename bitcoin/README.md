@@ -3,11 +3,17 @@ data analysis toolkit for data across blockchains
 
 ## Prerequisites
 1 instance with 1TB local storage space, we'll call this the "bitcoin" instance
+
 1 instance with 1TB storage for unified data, we'll call this the "unified" instance
+
 1 s3 bucket to archive raw files to (optional)
 
+## Setup
 In the bitcoin instance, setup awscli + credentials (if you want to use s3, which is optional)
-
+```bash
+sudo apt install awscli
+# edit ~/.profile and put aws credentials 
+```
 Install and run the bitcoin daemon, which is needed to download the blockchain:
 ```bash
 sudo add-apt-repository ppa:bitcoin/bitcoin
