@@ -6,7 +6,7 @@ unifiedjson=$(grep unifiedjson: ../bitcoin.config | awk '{print $2}')
 
 for i in `seq $1 $current_block`
 do
-    filename=$(printf "%06d.json" i)
+    filename=$(printf "%06d.json" $i)
     if [ ! -f $unifiedjson/$i.json ]
     then
 	bitcoin-cli getblockhash $i | xargs -I % bitcoin-cli getblock % 2 > $bitcoinjson/$filename
