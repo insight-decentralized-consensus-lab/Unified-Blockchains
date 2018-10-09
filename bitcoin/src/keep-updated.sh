@@ -7,6 +7,11 @@ then
 else
     last_block=$1
 fi
+if [ ! $(grep "success: True" ../setup.config | awk '{print $2}') ]
+then
+    echo "Error: pipeline needs to be setup first. Run ./initial-config.sh followed by ./initial-setup.sh from bitcoin directory"
+    exit 1
+fi
 
 while true
 do
@@ -14,7 +19,7 @@ do
     current_block=$(bitcoin-cli getblockchaininfo | grep blocks | sed 's@  "blocks": @@g; s@,@@g')
     if [ $(($current_block - $last_block)) -gt 1 ]
     then
-	./update-full-pipeline.sh
+	./update-full-pipeline.sh $last_block
 	last_block=$(($current_block-1))
     fi
 done
