@@ -1,3 +1,9 @@
+# repo specific files
+setup.config
+bitcoin.config
+ethereum.config
+litecoin.config
+
 # emacs file
 *~
 
