@@ -58,6 +58,14 @@ else
     fi
 fi
 
+if [ -z $(which bitcoin-cli) ]
+then
+    echo "Error: The bitcoin daemon is not installed."
+    echo "install bitcoin core daemon and run via bitcoind -daemon then try again"
+    echo "success: False" > setup.config
+    exit 1
+fi
+
 echo "Checking bitcoin-cli connection"
 if [ ! "$(bitcoin-cli getblockhash 0)" -eq 000000000019d6689c085ae165831e934ff763ae46a2a6c172b3f1b60a8ce26f ]
 then
