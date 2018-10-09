@@ -59,7 +59,7 @@ else
 fi
 
 echo "Checking bitcoin-cli connection"
-if [ ! $(bitcoin-cli getblockhash 0) -eq 000000000019d6689c085ae165831e934ff763ae46a2a6c172b3f1b60a8ce26f ]
+if [ ! "$(bitcoin-cli getblockhash 0)" -eq 000000000019d6689c085ae165831e934ff763ae46a2a6c172b3f1b60a8ce26f ]
 then
     echo "Error connecting to bitcoin daemon, is it running? run bitcoind -deamon and try again."
     echo "success: False" > setup.config
