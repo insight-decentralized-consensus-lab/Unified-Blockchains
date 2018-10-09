@@ -1,4 +1,12 @@
-last_block=542999
+#!/usr/bin/env bash
+if [ -z $1 ]
+then
+    echo "Error: need to input the latest block the pipeline has already processed"
+    echo "usage: ./keep-updated.sh 545054"
+    exit 1
+else
+    last_block=$1
+fi
 
 while true
 do
