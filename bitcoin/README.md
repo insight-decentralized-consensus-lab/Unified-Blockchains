@@ -25,7 +25,7 @@ Host 10.0.0.10
 
 Clone this repo
 ```bash
-https://github.com/velicanu/unified-blockchains.git
+git clone https://github.com/velicanu/unified-blockchains.git
 cd unified-blockchains/bitcoin
 ```
 
