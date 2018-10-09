@@ -13,6 +13,7 @@ In the bitcoin instance, setup awscli + credentials (if you want to use s3, whic
 ```bash
 sudo apt install awscli
 # edit ~/.profile and put aws credentials 
+# don't forget to source ~/.profile after adding credentials
 ```
 Install and run the bitcoin daemon, which is needed to download the blockchain:
 ```bash
