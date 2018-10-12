@@ -57,3 +57,17 @@ cd src/
 
 The above command will start the pipeline and pull new data whenever it becomes available. The argument is at which block to start looking for new data from. If running on a cloud instance, it's best to run this in a screen session so it can continue running in the background.
 
+
+## Tests
+
+The tests/ directory has tests which validate the blockchain data. To run it the ```jq``` program needs to be installed, in order to parse the json files from the command line
+
+```bash
+sudo apt install jq
+```
+
+Then run the tests to see if the pipeline is working.
+
+```bash
+./tests/run_all.sh
+```
