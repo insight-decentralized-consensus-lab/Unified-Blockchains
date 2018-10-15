@@ -6,16 +6,8 @@ data analysis toolkit for data across blockchains
 
 1 instance with 1TB storage for unified data, we'll call this the "unified" instance
 
-1 s3 bucket to archive raw files to (optional)
-
 ## Setup
-In the ethereum instance, setup awscli + credentials (if you want to use s3, which is optional)
-```bash
-sudo apt install awscli
-# edit ~/.profile and put aws credentials 
-# don't forget to source ~/.profile after adding credentials
-```
-Install and run the bitcoin daemon, which is needed to download the blockchain:
+Install and run the ethereum daemon, which is needed to download the blockchain:
 ```bash
 sudo apt-get install software-properties-common
 sudo add-apt-repository -y ppa:ethereum/ethereum
