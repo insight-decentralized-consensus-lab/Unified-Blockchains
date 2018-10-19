@@ -34,7 +34,7 @@ then
 else
     echo -e "\e[31mFail block hash test.\e[0m"
     echo $unifiedjson/000097.json
-    echo looking for a hash value of $block97hash
+    echo looking for a hash value of $block97miner
     echo found $miner
 fi
 
@@ -64,7 +64,7 @@ then
 else
     echo -e "\e[31mFail block hash test.\e[0m"
     echo $unifiedjson/500097.json
-    echo looking for a hash value of $block597hash
+    echo looking for a hash value of $block597miner
     echo found $miner
 fi
 
