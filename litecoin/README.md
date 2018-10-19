@@ -1,4 +1,4 @@
-# Bitcoin pipeline
+# Litecoin pipeline
 data analysis toolkit for data across blockchains
 
 ## Prerequisites
@@ -17,9 +17,14 @@ sudo apt install awscli
 ```
 Install and run the litecoin daemon, which is needed to download the blockchain:
 ```bash
-sudo add-apt-repository ppa:litecoin/litecoin
-sudo apt-get update
-sudo apt install litecoind
+# download litecoin core from https://litecoin.org/ , suppose the downloaded file is called
+# litecoin-0.16.3-x86_64-linux-gnu.tar.gz
+# go to where it's downloaded and optionally put it where you'd like to have it be installed
+gunzip litecoin-0.16.3-x86_64-linux-gnu.tar.gz
+tar xvf litecoin-0.16.3-x86_64-linux-gnu.tar
+# next we'll add a link to bin for litecoind and litecoin-cli 
+sudo ln -s litecoin-0.16.3/bin/litecoind /bin/
+sudo ln -s litecoin-0.16.3/bin/litecoin-cli /bin/
 litecoind -daemon
 ```
 
