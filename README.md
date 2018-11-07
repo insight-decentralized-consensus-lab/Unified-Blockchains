@@ -1,22 +1,10 @@
-# unified-blockchains
-data analysis toolkit for data across blockchains
+# Unified-Blockchains
+Data analysis toolkit for data across blockchains
 
-## Setup
-Tested on a fresh Ubuntu 16.04.2 LTS install. 
-
-First, clone this repository:
-```bash
-https://github.com/velicanu/unified-blockchains.git
-```
-
-AWS tools, needed for S3 archive portion. Can skip this if not using S3.
-```bash
-sudo apt install awscli
-```
-
-Instructions for bitcoin, ethereum, and litecoin are in the readme's in their respective directories.
+This repository combines data from multiple blockchains in different formats into a standard, unified format, in order to perform analyses across blockchains agnostic of the initial format of the underlying blockchains. Tools to do sample analyses using both SQL and a distributed map reduce with pandas are given to show what can be done for any blockchain. 
 
 ![Image description](https://github.com/velicanu/unified-blockchains/blob/master/img/img-1.png) ![Image description](https://github.com/velicanu/unified-blockchains/blob/master/img/img-2.png)
+
 
 
 
