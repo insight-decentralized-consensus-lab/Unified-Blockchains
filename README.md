@@ -13,7 +13,9 @@ The pipeline which takes raw blockchain data and transforms it into a JSON and S
 ## Sample Analyses
 
 A straightforward analysis on this data is asking what address mined the most bitcoin. This translates to a simple SQL query as shown in the figure below. But since each blockchain has the same format in this framework, getting the top miner for Ethereum is running the exact same query, just on a different table.
+
 ![Image description](https://raw.githubusercontent.com/velicanu/unified-blockchains/master/img/img-4.png)
 
-Another sample analysis done in this framework is counting the number of transactions per day. Since this requires scanning a large number of rows in the transaction database, using a pandas-powered map reduce query on a 6 node cluster yields the same result as a SQL query alone in about 1/6th the time as shown in the figure below. The figure shows the transactions per day for both bitcoin and ethereum, which are made with the exact same code. 
+Another sample analysis done in this framework is counting the number of transactions per day. Since this requires scanning a large number of rows in the transaction database, using a pandas-powered map reduce query on a 6 node cluster yields the same result as a SQL query alone in about 1/6th the time as shown in the figure below. The figure shows the transactions per day for both bitcoin and ethereum, which are made with the exact same code.
+
 ![Image description](https://raw.githubusercontent.com/velicanu/unified-blockchains/master/img/img-5.png)
