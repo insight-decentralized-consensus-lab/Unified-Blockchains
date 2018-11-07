@@ -16,5 +16,5 @@ sudo apt install awscli
 
 Instructions for bitcoin, ethereum, and litecoin are in the readme's in their respective directories.
 
-![Image description](https://github.com/velicanu/unified-blockchains/blob/master/img/img-1.png)
+![Image description](https://github.com/velicanu/unified-blockchains/blob/master/img/img-1.png) ![Image description](https://github.com/velicanu/unified-blockchains/blob/master/img/img-2.png)
 
